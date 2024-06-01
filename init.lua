@@ -247,7 +247,9 @@ require('lazy').setup({
         },
         ignore_filetypes = { cpp = true },
         color = {
-          suggestion_color = '#292e41',
+          suggestion_color = '#9ca3c7',
+          suggestion_bg_color = '#1d1f21',
+          suggestion_border_color = '#9ca3c7',
           cterm = 244,
         },
         disable_inline_completion = false, -- disables inline completion for use with cmp
@@ -280,20 +282,20 @@ require('lazy').setup({
           notification_style = 'native',
         },
         root_patterns = { '.git', 'pubspec.yaml' },
-        -- decorations = {
-        --   statusline = {
-        --     -- set to true to be able use the 'flutter_tools_decorations.app_version' in your statusline
-        --     -- this will show the current version of the flutter app from the pubspec.yaml file
-        --     app_version = true,
-        --     -- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
-        --     -- this will show the currently running device if an application was started with a specific
-        --     -- device
-        --     device = true,
-        --     -- set to true to be able use the 'flutter_tools_decorations.project_config' in your statusline
-        --     -- this will show the currently selected project configuration
-        --     project_config = false,
-        --   },
-        -- },
+        decorations = {
+          statusline = {
+            -- set to true to be able use the 'flutter_tools_decorations.app_version' in your statusline
+            -- this will show the current version of the flutter app from the pubspec.yaml file
+            app_version = false,
+            -- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
+            -- this will show the currently running device if an application was started with a specific
+            -- device
+            device = false,
+            -- set to true to be able use the 'flutter_tools_decorations.project_config' in your statusline
+            -- this will show the currently selected project configuration
+            project_config = false,
+          },
+        },
         flutter_lookup_cmd = 'dirname $(which flutter)',
         widget_guides = {
           enabled = true,
